@@ -33,6 +33,7 @@
 		},
 		draw: function(){
 			ctx.clearRect(0, 0, 500, 500);
+			ctx.beginPath();
 			ctx.moveTo(76,197);
 			ctx.lineTo(421,197);  
 			ctx.lineTo(143,399);  
