@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head><title>微博 v1.0 前端接口文档</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="微博-v10-前端接口文档">微博 v1.0 前端接口文档</h1>
+
+<p></p>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#微博-v10-前端接口文档">微博 v1.0 前端接口文档</a><ul>
+<li><a href="#首页">首页</a><ul>
+<li><a href="#1-左侧列表">1. 左侧列表</a><ul>
+<li><a href="#1-获取加入小组接口">[1] 获取加入小组接口</a></li>
+<li><a href="#2-获取热门小组接口">[2] 获取热门小组接口</a></li>
+<li><a href="#3-获取首页-wb-动态接口">[3] 获取首页 wb 动态接口</a></li>
+<li><a href="#4-获取我赞过的-wb-动态接口">[4] 获取我赞过的 wb 动态接口</a></li>
+<li><a href="#5-获取我收藏的-wb-动态接口">[5] 获取我收藏的 wb 动态接口</a></li>
+<li><a href="#6-获取热门动态的接口">[6] 获取热门动态的接口</a></li>
+<li><a href="#7-获取加入小组列表的接口">[7] 获取加入小组列表的接口</a></li>
+<li><a href="#8-获取右侧用户卡片信息接口">[8] 获取右侧用户卡片信息接口</a></li>
+<li><a href="#9-获取全部小组接口鱼吧全部小组">[9] 获取全部小组接口——鱼吧全部小组</a></li>
+</ul>
+</li>
+<li><a href="#2-wb动态相关">2. wb动态相关</a><ul>
+<li><a href="#1-获取回复列表接口">[1] 获取回复列表接口</a></li>
+<li><a href="#2-收藏接口">[2] 收藏接口</a></li>
+<li><a href="#3-点赞接口">[3] 点赞接口</a></li>
+<li><a href="#4-举报接口">[4] 举报接口</a></li>
+<li><a href="#5-删除接口">[5] 删除接口</a></li>
+<li><a href="#6-动态详情接口">[6] 动态详情接口</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#个人页">个人页</a><ul>
+<li><a href="#1个人主页">1.个人主页</a><ul>
+<li><a href="#1-获取个人页头部信息接口">[1] 获取个人页头部信息接口</a></li>
+<li><a href="#2-个人简介修改接口">[2] 个人简介修改接口</a></li>
+<li><a href="#3-最新-wb-动态接口">[3] 最新 wb 动态接口</a></li>
+<li><a href="#4-热门-wb-动态接口">[4] 热门 wb 动态接口</a></li>
+<li><a href="#5-获取关注小组接口">[5] 获取关注小组接口</a></li>
+</ul>
+</li>
+<li><a href="#2关注页">2.关注页</a><ul>
+<li><a href="#1-获取关注列表数据接口">[1] 获取关注列表数据接口</a></li>
+<li><a href="#2-获取全部关注接口">[2] 获取全部关注接口</a></li>
+<li><a href="#3-获取关注人接口">[3] 获取关注人接口</a></li>
+<li><a href="#4-获取关注小组接口">[4] 获取关注小组接口</a></li>
+<li><a href="#5-获取关注话题接口">[5] 获取关注话题接口</a></li>
+<li><a href="#6-获取用户粉丝接口">[6] 获取用户粉丝接口</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#登录">登录</a><ul>
+<li><ul>
+<li><a href="#1-登录接口">[1] 登录接口</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="首页">首页</h2>
+
+<h3 id="1-左侧列表">1. 左侧列表</h3>
+
+<h4 id="1-获取加入小组接口">[1] 获取加入小组接口</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs">/**<br>  * 数据接收 json 格式<br>*/<br><span class="hljs-string">"groupNav"</span>: [{<br>    <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">"data"</span>: [{<br>        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"云中欧皇"</span>,<br>        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/group/oh"</span><br>    }]<br>}]<br></code></pre>
+
+<h4 id="2-获取热门小组接口">[2] 获取热门小组接口</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs">/**<br>  * 数据接收 json 格式<br>*/<br><span class="hljs-string">"hotGroupNav"</span>: [{<br>    <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">"data"</span>: [{<br>        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"英雄联盟"</span>,<br>        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/hotgroup/lol"</span><br>    },{<br>        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"DOTA2"</span>,<br>        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/hotgroup/dota2"</span><br>    }]<br>}]<br></code></pre>
+
+<h4 id="3-获取首页-wb-动态接口">[3]<span id="mainwbs"> 获取首页 wb 动态接口</span></h4>
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs">/**<br>  * 数据接收 json 格式<br>*/<br><span class="hljs-string">"wbs"</span>: [{<br>    <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">"data"</span>: [{<br>        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"625406464478968801"</span>,<br>        <span class="hljs-attr">"type"</span>: <span class="hljs-number">0</span>,<br>        <span class="hljs-attr">"sub_type"</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-attr">"relate_id"</span>: <span class="hljs-number">0</span>,<br>        <span class="hljs-attr">"uid"</span>: <span class="hljs-number">20000354</span>,<br>        <span class="hljs-attr">"avatar"</span>: <span class="hljs-string">"https://apic.douyucdn.cn/upload/avanew/face/201703/07/15/5f3dacf12aa2f7ab1e09c0290f9df83d_big.jpg?rltime=1493033525"</span>,<br>        <span class="hljs-attr">"username"</span>: <span class="hljs-string">"大司马"</span>,<br>        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2015年1月4日"</span>,<br>        <span class="hljs-attr">"views"</span>: <span class="hljs-string">"1万"</span>,<br>        <span class="hljs-attr">"postContent"</span>: <span class="hljs-string">"#话题话题#[url src=\"http://www.douyu.com/t/dota2KIEV?roomIndex=0\"]网页链接[/url][img src=\"https://img.douyucdn.cn/data/yuba/default/2017/03/22/201703221450541430.jpg?i=41920ac93ab09945ae7aab86586b810804\"]查看图片[/img] [user src=\"20000354\"]@用户昵称[/user]adfadfadf[img src=\"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg\"]查看图片[/img]adfadfa[url src=\"http://www.douyu.com/t/dota2KIEV?roomIndex=0\"]网页链接[/url]"</span>,<br>        <span class="hljs-attr">"imglist"</span>: [{<br>            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg?i=36903fb1329e929ecf057c5d4cae657423"</span>,<br>            <span class="hljs-attr">"size"</span>: {<br>              <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>              <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>            }<br>          },<br>          {<br>            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg?i=36903fb1329e929ecf057c5d4cae657423"</span>,<br>            <span class="hljs-attr">"size"</span>: {<br>              <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>              <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>            }<br>          },<br>          {<br>            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg?i=36903fb1329e929ecf057c5d4cae657423"</span>,<br>            <span class="hljs-attr">"size"</span>: {<br>              <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>              <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>            }<br>          }<br>        ],<br>        <span class="hljs-attr">"post"</span>: {<br>          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"我是title"</span>,<br>          <span class="hljs-attr">"content"</span>: <span class="hljs-string">"帖子内容，我是纯文本"</span>,<br>          <span class="hljs-attr">"group_id"</span>: <span class="hljs-number">565</span>,<br>          <span class="hljs-attr">"group_name"</span>: <span class="hljs-string">"大司马"</span>,<br>          <span class="hljs-attr">"imglist"</span>: [{<br>            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg?i=36903fb1329e929ecf057c5d4cae657423"</span>,<br>            <span class="hljs-attr">"size"</span>: {<br>              <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>              <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>            }<br>          }],<br>          <span class="hljs-attr">"video"</span>: {<br>            <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,<br>            <span class="hljs-attr">"thumb"</span>: <span class="hljs-string">"https://vodpic1.douyucdn.cn/image/live-58428rEZalvK27XI--20170421001853/cover.jpg"</span>,<br>            <span class="hljs-attr">"player"</span>: <span class="hljs-string">""</span>,<br>            <span class="hljs-attr">"from"</span>: <span class="hljs-string">""</span>,<br>            <span class="hljs-attr">"swf"</span>: <span class="hljs-string">"https://vswf.douyucdn.cn/share/vshare.swf?vid=jbrN0MmmXE3MpyxA"</span>,<br>            <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span><br>          }<br>        },<br>        <span class="hljs-attr">"video"</span>: {<br>          <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,<br>          <span class="hljs-attr">"thumb"</span>: <span class="hljs-string">"https://vodpic1.douyucdn.cn/image/live-58428rEZalvK27XI--20170421001853/cover.jpg"</span>,<br>          <span class="hljs-attr">"player"</span>: <span class="hljs-string">""</span>,<br>          <span class="hljs-attr">"from"</span>: <span class="hljs-string">""</span>,<br>          <span class="hljs-attr">"swf"</span>: <span class="hljs-string">"https://vswf.douyucdn.cn/share/vshare.swf?vid=jbrN0MmmXE3MpyxA"</span>,<br>          <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span><br>        },<br>        <span class="hljs-attr">"comments"</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-attr">"likes"</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-attr">"reposts"</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-attr">"is_liked"</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-attr">"is_favorited"</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-attr">"source_id"</span>: <span class="hljs-number">0</span>,<br>        <span class="hljs-attr">"source_feed"</span>: {<br>          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"625406464478968800"</span>,<br>          <span class="hljs-attr">"type"</span>: <span class="hljs-number">0</span>,<br>          <span class="hljs-attr">"sub_type"</span>: <span class="hljs-number">2</span>,<br>          <span class="hljs-attr">"relate_id"</span>: <span class="hljs-number">0</span>,<br>          <span class="hljs-attr">"uid"</span>: <span class="hljs-number">20000354</span>,<br>          <span class="hljs-attr">"avatar"</span>: <span class="hljs-string">"https://apic.douyucdn.cn/upload/avanew/face/201703/07/15/5f3dacf12aa2f7ab1e09c0290f9df83d_big.jpg?rltime=1493033525"</span>,<br>          <span class="hljs-attr">"username"</span>: <span class="hljs-string">"大司马"</span>,<br>          <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2015年1月4日"</span>,<br>          <span class="hljs-attr">"views"</span>: <span class="hljs-string">"1万"</span>,<br>          <span class="hljs-attr">"postContent"</span>: <span class="hljs-string">"兄弟们感谢你们的支持，我爱你们"</span>,<br>          <span class="hljs-attr">"imglist"</span>: [{<br>              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/03/22/201703221449062337.jpg?i=387686c3456c675a72b528b97bb98f6633"</span>,<br>              <span class="hljs-attr">"size"</span>: {<br>                <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>                <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>              }<br>            },<br>            {<br>              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/03/22/201703221450541430.jpg?i=41920ac93ab09945ae7aab86586b810804"</span>,<br>              <span class="hljs-attr">"size"</span>: {<br>                <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>                <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>              }<br>            },<br>            {<br>              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg?i=36903fb1329e929ecf057c5d4cae657423"</span>,<br>              <span class="hljs-attr">"size"</span>: {<br>                <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>                <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>              }<br>            }<br>          ],<br>          <span class="hljs-attr">"post"</span>: {<br>            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"我是title"</span>,<br>            <span class="hljs-attr">"content"</span>: <span class="hljs-string">"帖子内容，我是纯文本"</span>,<br>            <span class="hljs-attr">"group_id"</span>: <span class="hljs-number">565</span>,<br>            <span class="hljs-attr">"group_name"</span>: <span class="hljs-string">"大司马"</span>,<br>            <span class="hljs-attr">"imglist"</span>: [{<br>              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://img.douyucdn.cn/data/yuba/default/2017/04/24/201704241124249165.jpg?i=36903fb1329e929ecf057c5d4cae657423"</span>,<br>              <span class="hljs-attr">"size"</span>: {<br>                <span class="hljs-attr">"w"</span>: <span class="hljs-number">690</span>,<br>                <span class="hljs-attr">"h"</span>: <span class="hljs-number">742</span><br>              }<br>            }],<br>            <span class="hljs-attr">"video"</span>: {<br>              <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,<br>              <span class="hljs-attr">"thumb"</span>: <span class="hljs-string">"https://vodpic1.douyucdn.cn/image/live-58428rEZalvK27XI--20170421001853/cover.jpg"</span>,<br>              <span class="hljs-attr">"player"</span>: <span class="hljs-string">""</span>,<br>              <span class="hljs-attr">"from"</span>: <span class="hljs-string">""</span>,<br>              <span class="hljs-attr">"swf"</span>: <span class="hljs-string">"https://vswf.douyucdn.cn/share/vshare.swf?vid=jbrN0MmmXE3MpyxA"</span>,<br>              <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span><br>            }<br>          },<br>          <span class="hljs-attr">"video"</span>: {<br>            <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,<br>            <span class="hljs-attr">"thumb"</span>: <span class="hljs-string">"https://vodpic1.douyucdn.cn/image/live-58428rEZalvK27XI--20170421001853/cover.jpg"</span>,<br>            <span class="hljs-attr">"player"</span>: <span class="hljs-string">""</span>,<br>            <span class="hljs-attr">"from"</span>: <span class="hljs-string">""</span>,<br>            <span class="hljs-attr">"swf"</span>: <span class="hljs-string">"https://vswf.douyucdn.cn/share/vshare.swf?vid=jbrN0MmmXE3MpyxA"</span>,<br>            <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span><br>          },<br>          <span class="hljs-attr">"comments"</span>: <span class="hljs-number">1</span>,<br>          <span class="hljs-attr">"likes"</span>: <span class="hljs-number">1</span>,<br>          <span class="hljs-attr">"reposts"</span>: <span class="hljs-number">1</span>,<br>          <span class="hljs-attr">"is_liked"</span>: <span class="hljs-number">1</span>,<br>          <span class="hljs-attr">"is_favorited"</span>: <span class="hljs-number">1</span><br>        }<br>      }]<br>}]<br></code></pre>
+
+<h4 id="4-获取我赞过的-wb-动态接口">[4] 获取我赞过的 wb 动态接口</h4>
+
+<blockquote>
+  <p>数据格式同 <a href="#mainwbs">[3] 首页动态接口</a></p>
+</blockquote>
+
+<h4 id="5-获取我收藏的-wb-动态接口">[5] 获取我收藏的 wb 动态接口</h4>
+
+<blockquote>
+  <p>数据格式同 <a href="#mainwbs">[3] 首页动态接口</a></p>
+</blockquote>
+
+
+
+<h4 id="6-获取热门动态的接口">[6] 获取热门动态的接口</h4>
+
+<blockquote>
+  <p>数据格式同 <a href="#mainwbs">[3] 首页动态接口</a></p>
+</blockquote>
+
+<h4 id="7-获取加入小组列表的接口">[7] 获取加入小组列表的接口</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs">/**<br>  * 数据接收 json 格式<br>*/<br><span class="hljs-string">"mainGroup"</span>:[{<br>    <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">"data"</span>:  [{<br>      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"1"</span>,<br>      <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>,<br>      <span class="hljs-attr">"groupAvatar"</span>: <span class="hljs-string">"https://apic.douyucdn.cn/upload/avanew/face/201703/15/20/375843997045e87c2a760b8836689ce6_big.jpg"</span>,<br>      <span class="hljs-attr">"groupUrl"</span>: <span class="hljs-string">""</span>,<br>      <span class="hljs-attr">"groupTitle"</span>: <span class="hljs-string">"# 我的照片会开会 #"</span>,<br>      <span class="hljs-attr">"groupDes"</span>: <span class="hljs-string">"花开有期，稍纵即逝，留住花开的美好"</span>,<br>      <span class="hljs-attr">"member"</span>: <span class="hljs-string">"2314"</span>,<br>      <span class="hljs-attr">"postNum"</span>: <span class="hljs-string">"339"</span>,<br>      <span class="hljs-attr">"noReadNum"</span>: <span class="hljs-number">2</span>,<br>      <span class="hljs-attr">"noReadPosts"</span>: [<br>        {<br>            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"花开有期，稍纵即逝，留住花开的美好"</span>,<br>            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/p/1234"</span><br>        },{<br>            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"hahaahahahha, 我要成仙了!!!!"</span>,<br>            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/p/0987"</span><br>        }        <br>      ]<br>    }]<br>}]<br></code></pre>
+
+<h4 id="8-获取右侧用户卡片信息接口">[8] 获取右侧用户卡片信息接口</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><span class="hljs-string">"userInfo"</span>: [{<br>    <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">"data"</span>: [{<br>        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"无敌的大司马"</span>,<br>        <span class="hljs-attr">"avatar"</span>: <span class="hljs-string">"https://avatar.cn/dsm.jpg"</span>,<br>        <span class="hljs-attr">"proInfo"</span>: <span class="hljs-string">"这个家伙很懒，什么都没有留下，我不知道该留下什么"</span>,<br>        <span class="hljs-attr">""</span><br>    }]<br>}]<br></code></pre>
+
+<h4 id="9-获取全部小组接口鱼吧全部小组">[9] 获取全部小组接口——<a href="https://yuba.douyu.com/index/allgroup" target="_blank">鱼吧全部小组</a></h4>
+
+<h3 id="2-wb动态相关">2. wb动态相关</h3>
+
+<h4 id="1-获取回复列表接口">[1] 获取回复列表接口</h4>
+
+<h4 id="2-收藏接口">[2] 收藏接口</h4>
+
+<h4 id="3-点赞接口">[3] 点赞接口</h4>
+
+<h4 id="4-举报接口">[4] 举报接口</h4>
+
+<h4 id="5-删除接口">[5] 删除接口</h4>
+
+<h4 id="6-动态详情接口">[6] 动态详情接口</h4>
+
+<h2 id="个人页">个人页</h2>
+
+<h3 id="1个人主页">1.个人主页</h3>
+
+
+
+<h4 id="1-获取个人页头部信息接口">[1] 获取个人页头部信息接口</h4>
+
+
+
+<h4 id="2-个人简介修改接口">[2] 个人简介修改接口</h4>
+
+<h4 id="3-最新-wb-动态接口">[3] 最新 wb 动态接口</h4>
+
+<h4 id="4-热门-wb-动态接口">[4] 热门 wb 动态接口</h4>
+
+<h4 id="5-获取关注小组接口">[5] 获取关注小组接口</h4>
+
+<h3 id="2关注页">2.关注页</h3>
+
+<h4 id="1-获取关注列表数据接口">[1] 获取关注列表数据接口</h4>
+
+<h4 id="2-获取全部关注接口">[2] 获取全部关注接口</h4>
+
+<h4 id="3-获取关注人接口">[3] 获取关注人接口</h4>
+
+<h4 id="4-获取关注小组接口">[4] 获取关注小组接口</h4>
+
+<h4 id="5-获取关注话题接口">[5] 获取关注话题接口</h4>
+
+<h4 id="6-获取用户粉丝接口">[6] 获取用户粉丝接口</h4>
+
+<h2 id="登录">登录</h2>
+
+<h4 id="1-登录接口">[1] 登录接口</h4>
+
+</div></body></html>
