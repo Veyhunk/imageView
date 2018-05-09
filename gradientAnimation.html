@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .loading-list-wrap {
+            padding: 24px 0 0 24px;
+        }
+
+        .loading-list-wrap .loading-item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 40px;
+        }
+
+        .loading-list-wrap .file-temp {
+            width: 82px;
+            height: 82px;
+            margin-right: 20px;
+        }
+
+        .loading-list-wrap .name-temp {
+            margin-top: 8px;
+            width: 178px;
+            height: 28px;
+        }
+
+        .loading-list-wrap .des-temp {
+            margin-top: 18px;
+            width: 308px;
+            height: 20px;
+        }
+
+        .loading-list-wrap .file-temp,
+        .name-temp,
+        .des-temp {
+            animation-name: loading;
+            animation-duration: 1.8s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            background: linear-gradient(90deg, #EDEEF1 0%, #F6F7F9 50%, #EDEEF1 100%);
+            background-size: 200% 100%;
+            background-position: 200% 0;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='loading-list-wrap'>
+        <div class='loading-item'>
+            <div class='file-temp'></div>
+            <div class='file-pro-wrap'>
+                <div style='width: 178px;' class='name-temp'></div>
+                <div style='width: 308px;' class='des-temp'></div>
+            </div>
+        </div>
+
+        <div class='loading-item'>
+            <div class='file-temp'></div>
+            <div class='file-pro-wrap'>
+                <div style='width: 148px;' class='name-temp'></div>
+                <div style='width: 244px;' class='des-temp'></div>
+            </div>
+        </div>
+
+        <div class='loading-item'>
+            <div class='file-temp'></div>
+            <div class='file-pro-wrap'>
+                <div style='width: 98px;' class='name-temp'></div>
+                <div style='width: 420px;' class='des-temp'></div>
+            </div>
+        </div>
+
+        <div class='loading-item'>
+            <div class='file-temp'></div>
+            <div class='file-pro-wrap'>
+                <div style='width: 228px;' class='name-temp'></div>
+                <div style='width: 478px;' class='des-temp'></div>
+            </div>
+        </div>
+
+        <div class='loading-item'>
+            <div class='file-temp'></div>
+            <div class='file-pro-wrap'>
+                <div style='width: 294px;' class='name-temp'></div>
+                <div style='width: 178px;' class='des-temp'></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
